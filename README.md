@@ -1,43 +1,36 @@
-# Proposta de Valor: Sistema de Gestão de Solicitações de Compra
+# Proposta de Valor: Sistema de Gestão de Pedidos
 
 ## 1. Visão Geral do Projeto
 
-O sistema de gestão de solicitações de compra visa automatizar e otimizar o processo de requisições, aprovações e acompanhamento de solicitações de compra dentro da organização. Com base nas 17 funções definidas, o sistema oferecerá:
+O sistema de gestão de pedidos visa integrar os processos de venda, conectando bancos de dados da empresa cliente e fornecedora, além de fornecer uma interface intuitiva para cadastro e visualização de pedidos. Com base nas 10 funções definidas, o sistema oferecerá:
 
-- Autenticação e controle de acesso com diferentes níveis de usuário
-- Fluxo completo de solicitações de compra, desde a criação até a aprovação
-- Gerenciamento documental com anexos
-- Segurança avançada com JWT e registro de logs
-- Interface intuitiva para visualização e gerenciamento de solicitações
+- Integração com múltiplos bancos de dados (cliente e fornecedor)
+- Sincronização com API externa (TOTVS)
+- Gestão completa do ciclo de pedidos
+- Interface personalizada por cliente
+- Ferramentas de busca e filtro avançadas
 
 ## 2. Classificação das Funções por Complexidade
 
-Abaixo, classificamos cada uma das 17 funções do sistema quanto ao seu nível de complexidade:
+Abaixo, classificamos cada uma das 10 funções do sistema quanto ao seu nível de complexidade:
 
 | Função | Complexidade | Justificativa |
 |--------|-------------|---------------|
-| 1. Login de Usuário | Simples | Funcionalidade padrão com implementação bem estabelecida em Django |
-| 2. Validação de Usuário no Banco | Simples | Verificação básica de credenciais contra o banco de dados |
-| 3. Controle de Níveis de Acesso | Média | Requer implementação de permissões e regras específicas |
-| 4. Carregar Dados do Usuário no Login | Simples | Consulta simples ao banco para carregar perfil do usuário |
-| 5. Fluxo de Aprovação de Solicitação | Complexa | Envolve regras de negócio complexas e múltiplos estados |
-| 6. Consulta de Solicitações Pendentes para Aprovação | Média | Requer filtros específicos e interface de apresentação |
-| 7. Aprovar ou Reprovar Solicitação com Comentário | Média | Envolve atualizações de status e registro de justificativas |
-| 8. Gerenciamento de Sessão Segura (JWT) | Complexa | Implementação de segurança avançada com token e expiração |
-| 9. Registro de Logs de Ações | Média | Sistema de auditoria para rastrear ações dos usuários |
-| 10. Abrir Nova Solicitação de Compra | Média | Formulário complexo com múltiplos campos e validações |
-| 11. Buscar Solicitações Existentes | Simples | Consulta ao banco com filtros básicos |
-| 12. Visualizar Solicitações por Status | Simples | Agrupamento e exibição de dados por categoria |
-| 13. Atualizar Status de Solicitação | Média | Validações de permissão e atualização de estado |
-| 14. Editar Solicitação de Compra | Média | Formulário com validações e verificações de permissão |
-| 15. Excluir Solicitação de Compra | Média | Verificações de permissão e exclusão lógica |
-| 16. Anexar Documento em Solicitação | Complexa | Upload, armazenamento e gerenciamento de arquivos |
-| 17. Gerar Número Automático de Solicitação | Simples | Algoritmo simples de geração sequencial ou customizada |
+| 1. Puxar dados dos clientes | Média | Requer integração com banco externo e tratamento de dados |
+| 2. Puxar os produtos para venda | Média | Requer integração com banco externo e tratamento de dados para catálogo |
+| 3. Cadastro do pedido | Complexa | Envolve gravação em múltiplos bancos de dados com validações específicas |
+| 4. Menu de ação | Simples | Interface de navegação com opções de menu configuráveis |
+| 5. Listar os pedidos | Média | Consulta de dados e formatação em lista com informações resumidas |
+| 6. Integração com API de venda (TOTVS) | Complexa | Integração com API externa proprietária que exige adaptação específica |
+| 7. Integração com banco de dados do cliente | Complexa | Conexão e sincronização com banco de dados externo não padronizado |
+| 8. Integração com banco de dados do fornecedor | Complexa | Conexão e sincronização com outro banco de dados com estrutura diferente |
+| 9. Menu de configuração de usuário | Média | Interface de personalização por cliente com salvar configurações |
+| 10. Filtro de pesquisa | Média | Implementação de mecanismo de busca com múltiplos parâmetros |
 
 **Resumo:**
-- Funções Simples: 6 funções
-- Funções de Complexidade Média: 8 funções
-- Funções Complexas: 3 funções
+- Funções Simples: 1 função
+- Funções de Complexidade Média: 5 funções
+- Funções Complexas: 4 funções
 
 ## 3. Estimativa de Custo por Nível de Desenvolvedor
 
@@ -47,34 +40,34 @@ Com base na classificação acima, apresentamos a estimativa de custo detalhada 
 
 | Complexidade | Quantidade | Valor Unitário | Subtotal |
 |--------------|------------|----------------|----------|
-| Simples | 6 | R$ 1.000 | R$ 6.000 |
-| Média | 8 | R$ 2.200 | R$ 17.600 |
-| Complexa | 3 | R$ 3.500 | R$ 10.500 |
-| **TOTAL** | **17** | | **R$ 34.100** |
+| Simples | 1 | R$ 1.000 | R$ 1.000 |
+| Média | 5 | R$ 2.200 | R$ 11.000 |
+| Complexa | 4 | R$ 3.500 | R$ 14.000 |
+| **TOTAL** | **10** | | **R$ 26.000** |
 
-**Faixa de preço estimada:** R$ 30.000 - R$ 40.000
+**Faixa de preço estimada:** R$ 22.000 - R$ 30.000
 
 ### 3.2 Desenvolvedor Pleno
 
 | Complexidade | Quantidade | Valor Unitário | Subtotal |
 |--------------|------------|----------------|----------|
-| Simples | 6 | R$ 1.800 | R$ 10.800 |
-| Média | 8 | R$ 3.500 | R$ 28.000 |
-| Complexa | 3 | R$ 6.000 | R$ 18.000 |
-| **TOTAL** | **17** | | **R$ 56.800** |
+| Simples | 1 | R$ 1.800 | R$ 1.800 |
+| Média | 5 | R$ 3.500 | R$ 17.500 |
+| Complexa | 4 | R$ 6.000 | R$ 24.000 |
+| **TOTAL** | **10** | | **R$ 43.300** |
 
-**Faixa de preço estimada:** R$ 50.000 - R$ 65.000
+**Faixa de preço estimada:** R$ 38.000 - R$ 48.000
 
 ### 3.3 Desenvolvedor Sênior
 
 | Complexidade | Quantidade | Valor Unitário | Subtotal |
 |--------------|------------|----------------|----------|
-| Simples | 6 | R$ 3.000 | R$ 18.000 |
-| Média | 8 | R$ 5.500 | R$ 44.000 |
-| Complexa | 3 | R$ 9.500 | R$ 28.500 |
-| **TOTAL** | **17** | | **R$ 90.500** |
+| Simples | 1 | R$ 3.000 | R$ 3.000 |
+| Média | 5 | R$ 5.500 | R$ 27.500 |
+| Complexa | 4 | R$ 9.500 | R$ 38.000 |
+| **TOTAL** | **10** | | **R$ 68.500** |
 
-**Faixa de preço estimada:** R$ 85.000 - R$ 110.000
+**Faixa de preço estimada:** R$ 60.000 - R$ 75.000
 
 ## 4. Estimativa de Tempo por Nível de Desenvolvedor
 
@@ -82,34 +75,34 @@ Com base na classificação acima, apresentamos a estimativa de custo detalhada 
 
 | Complexidade | Quantidade | Dias por Função | Subtotal (dias) |
 |--------------|------------|-----------------|----------------|
-| Simples | 6 | 4 | 24 |
-| Média | 8 | 8 | 64 |
-| Complexa | 3 | 13 | 39 |
-| **TOTAL** | **17** | | **127 dias** |
+| Simples | 1 | 4 | 4 |
+| Média | 5 | 8 | 40 |
+| Complexa | 4 | 13 | 52 |
+| **TOTAL** | **10** | | **96 dias** |
 
-**Prazo total estimado:** 25-26 semanas (aproximadamente 6 meses)
+**Prazo total estimado:** 19-20 semanas (aproximadamente 5 meses)
 
 ### 4.2 Desenvolvedor Pleno
 
 | Complexidade | Quantidade | Dias por Função | Subtotal (dias) |
 |--------------|------------|-----------------|----------------|
-| Simples | 6 | 2 | 12 |
-| Média | 8 | 5 | 40 |
-| Complexa | 3 | 8 | 24 |
-| **TOTAL** | **17** | | **76 dias** |
+| Simples | 1 | 2 | 2 |
+| Média | 5 | 5 | 25 |
+| Complexa | 4 | 8 | 32 |
+| **TOTAL** | **10** | | **59 dias** |
 
-**Prazo total estimado:** 15-16 semanas (aproximadamente 4 meses)
+**Prazo total estimado:** 12 semanas (aproximadamente 3 meses)
 
 ### 4.3 Desenvolvedor Sênior
 
 | Complexidade | Quantidade | Dias por Função | Subtotal (dias) |
 |--------------|------------|-----------------|----------------|
-| Simples | 6 | 1 | 6 |
-| Média | 8 | 3 | 24 |
-| Complexa | 3 | 6 | 18 |
-| **TOTAL** | **17** | | **48 dias** |
+| Simples | 1 | 1 | 1 |
+| Média | 5 | 3 | 15 |
+| Complexa | 4 | 6 | 24 |
+| **TOTAL** | **10** | | **40 dias** |
 
-**Prazo total estimado:** 10 semanas (aproximadamente 2,5 meses)
+**Prazo total estimado:** 8 semanas (aproximadamente 2 meses)
 
 ## 5. Análise Comparativa
 
@@ -117,50 +110,70 @@ Com base na classificação acima, apresentamos a estimativa de custo detalhada 
 
 | Nível | Custo Total | Prazo (meses) | Custo Médio Mensal | Custo por Função |
 |-------|------------|---------------|-------------------|------------------|
-| Júnior | R$ 34.100 | 6 | R$ 5.683 | R$ 2.006 |
-| Pleno | R$ 56.800 | 4 | R$ 14.200 | R$ 3.341 |
-| Sênior | R$ 90.500 | 2,5 | R$ 36.200 | R$ 5.324 |
+| Júnior | R$ 26.000 | 5 | R$ 5.200 | R$ 2.600 |
+| Pleno | R$ 43.300 | 3 | R$ 14.433 | R$ 4.330 |
+| Sênior | R$ 68.500 | 2 | R$ 34.250 | R$ 6.850 |
 
 ### 5.2 Considerações Importantes
 
+#### Desafios Específicos deste Projeto:
+
+Este projeto apresenta desafios particulares que impactam significativamente a escolha do desenvolvedor:
+
+1. **Múltiplas integrações**: Com 4 funções complexas relacionadas a integrações (API TOTVS e bancos de dados externos), há riscos substanciais que precisam ser mitigados por experiência técnica adequada.
+
+2. **Comunicação entre sistemas heterogêneos**: A necessidade de sincronizar dados entre sistemas diferentes requer conhecimento avançado em arquitetura de integração.
+
+3. **Tratamento de dados**: Manipulação e transformação de dados entre diferentes formatos e estruturas.
+
+4. **Conhecimento em APIs proprietárias**: A integração com a API TOTVS exige familiaridade com sistemas ERP corporativos.
+
 #### Desenvolvedor Júnior:
 - **Vantagens**: Menor custo inicial
-- **Desvantagens**: Prazo mais longo, maior probabilidade de retrabalho, necessidade de supervisão, implementação potencialmente menos robusta
+- **Desvantagens**: Provável dificuldade significativa com as integrações complexas, especialmente com a API TOTVS, possível incapacidade de resolver problemas de incompatibilidade entre bancos de dados
 
 #### Desenvolvedor Pleno:
-- **Vantagens**: Bom equilíbrio entre custo e prazo, conhecimento suficiente para implementar todas as funções com qualidade
-- **Desvantagens**: Pode necessitar de consulta em funções mais complexas
+- **Vantagens**: Experiência moderada com integrações, capacidade de implementar soluções com menor supervisão
+- **Desvantagens**: Pode enfrentar desafios em cenários de integração não convencionais
 
 #### Desenvolvedor Sênior:
-- **Vantagens**: Entrega mais rápida, código de maior qualidade e manutenibilidade, menor risco de retrabalho
-- **Desvantagens**: Custo inicial mais elevado
+- **Vantagens**: Experiência substancial com diferentes cenários de integração, capacidade de antecipar e resolver problemas complexos, implementação de arquitetura robusta
+- **Desvantagens**: Custo mais elevado
 
 ## 6. Benefícios do Sistema
 
 ### 6.1 Benefícios Estratégicos
-- Otimização do processo de compras
-- Governança e compliance
-- Visibilidade e controle
-- Redução de erros e retrabalho
+- Unificação dos processos de venda
+- Automatização de fluxos entre cliente e fornecedor
+- Redução de erros de comunicação entre sistemas
+- Visibilidade completa do ciclo de pedidos
 
 ### 6.2 Benefícios Operacionais
-- Centralização da informação
-- Rastreabilidade completa
-- Agilidade na aprovação
-- Organização documental
+- Redução do tempo de cadastro de pedidos
+- Eliminação de dupla digitação
+- Facilidade de consulta de histórico
+- Personalização por empresa cliente
 
 ### 6.3 Diferenciais Técnicos
-- Segurança avançada
-- Interface intuitiva
-- Escalabilidade
-- Geração automática de números
+- Integração bidirecional entre sistemas
+- Sincronização com sistema ERP (TOTVS)
+- Interface adaptável por cliente
+- Sistema de busca avançada
 
 ## 7. Recomendação Final
 
-Considerando a natureza do sistema, que envolve fluxos de aprovação, segurança e gerenciamento de documentos, recomendamos a contratação de um **desenvolvedor pleno**.
+Considerando as características específicas deste projeto, que envolve múltiplas integrações com sistemas externos (80% das funções são de complexidade média ou alta), **recomendamos fortemente a contratação de um desenvolvedor sênior**.
 
-Esta opção oferece o melhor equilíbrio entre custo, prazo e qualidade. Um desenvolvedor pleno possui conhecimento técnico suficiente para implementar as funções complexas com qualidade adequada, sem o custo elevado de um desenvolvedor sênior.
+As razões para esta recomendação são:
 
-Para um projeto crítico que exija máxima qualidade e velocidade de implementação, um desenvolvedor sênior seria a escolha ideal, apesar do custo mais elevado.
+1. **Alto risco técnico**: As integrações com bancos de dados externos e API TOTVS representam um risco significativo que exige experiência para mitigar.
+
+2. **Eficiência de tempo**: O tempo de desenvolvimento é 60% menor com um sênior em comparação com um júnior, o que pode ser crítico para o negócio.
+
+3. **Arquitetura robusta**: Um desenvolvedor sênior projetará uma arquitetura mais resiliente para lidar com as diferentes fontes de dados e sincronizações.
+
+4. **Menor custo total**: Apesar do valor/hora mais alto, o custo final pode ser otimizado pela maior eficiência e menor necessidade de retrabalho.
+
+Se o orçamento for uma limitação significativa, um desenvolvedor pleno com experiência específica em integrações e API TOTVS poderia ser uma alternativa viável, embora com maior risco e prazo.
 
 *Esta proposta considera apenas o desenvolvimento das funcionalidades listadas. Custos adicionais podem incluir: infraestrutura, treinamento, suporte e manutenção pós-implementação.*
