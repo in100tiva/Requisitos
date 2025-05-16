@@ -47,70 +47,13 @@ Com base na classificação acima, apresentamos a estimativa de custo detalhada 
 
 **Faixa de preço estimada:** R$ 22.000 - R$ 30.000
 
-### 3.2 Desenvolvedor Pleno
-
-| Complexidade | Quantidade | Valor Unitário | Subtotal |
-|--------------|------------|----------------|----------|
-| Simples | 1 | R$ 1.800 | R$ 1.800 |
-| Média | 5 | R$ 3.500 | R$ 17.500 |
-| Complexa | 4 | R$ 6.000 | R$ 24.000 |
-| **TOTAL** | **10** | | **R$ 43.300** |
-
-**Faixa de preço estimada:** R$ 38.000 - R$ 48.000
-
-### 3.3 Desenvolvedor Sênior
-
-| Complexidade | Quantidade | Valor Unitário | Subtotal |
-|--------------|------------|----------------|----------|
-| Simples | 1 | R$ 3.000 | R$ 3.000 |
-| Média | 5 | R$ 5.500 | R$ 27.500 |
-| Complexa | 4 | R$ 9.500 | R$ 38.000 |
-| **TOTAL** | **10** | | **R$ 68.500** |
-
-**Faixa de preço estimada:** R$ 60.000 - R$ 75.000
-
-## 4. Estimativa de Tempo por Nível de Desenvolvedor
-
-### 4.1 Desenvolvedor Júnior
-
-| Complexidade | Quantidade | Dias por Função | Subtotal (dias) |
-|--------------|------------|-----------------|----------------|
-| Simples | 1 | 4 | 4 |
-| Média | 5 | 8 | 40 |
-| Complexa | 4 | 13 | 52 |
-| **TOTAL** | **10** | | **96 dias** |
-
-**Prazo total estimado:** 19-20 semanas (aproximadamente 5 meses)
-
-### 4.2 Desenvolvedor Pleno
-
-| Complexidade | Quantidade | Dias por Função | Subtotal (dias) |
-|--------------|------------|-----------------|----------------|
-| Simples | 1 | 2 | 2 |
-| Média | 5 | 5 | 25 |
-| Complexa | 4 | 8 | 32 |
-| **TOTAL** | **10** | | **59 dias** |
-
-**Prazo total estimado:** 12 semanas (aproximadamente 3 meses)
-
-### 4.3 Desenvolvedor Sênior
-
-| Complexidade | Quantidade | Dias por Função | Subtotal (dias) |
-|--------------|------------|-----------------|----------------|
-| Simples | 1 | 1 | 1 |
-| Média | 5 | 3 | 15 |
-| Complexa | 4 | 6 | 24 |
-| **TOTAL** | **10** | | **40 dias** |
-
-**Prazo total estimado:** 8 semanas (aproximadamente 2 meses)
-
 ## 5. Análise Comparativa
 
 ### 5.1 Comparativo de Custo-Benefício
 
 | Nível | Custo Total | Prazo (meses) | Custo Médio Mensal | Custo por Função |
 |-------|------------|---------------|-------------------|------------------|
-| Júnior | R$ 26.000 | 5 | R$ 5.200 | R$ 2.600 |
+| Júnior | R$ 24.700 | 5 | R$ 5.200 | R$ 2.600 |
 | Pleno | R$ 43.300 | 3 | R$ 14.433 | R$ 4.330 |
 | Sênior | R$ 68.500 | 2 | R$ 34.250 | R$ 6.850 |
 
@@ -120,7 +63,7 @@ Com base na classificação acima, apresentamos a estimativa de custo detalhada 
 
 Este projeto apresenta desafios particulares que impactam significativamente a escolha do desenvolvedor:
 
-1. **Múltiplas integrações**: Com 4 funções complexas relacionadas a integrações (API TOTVS e bancos de dados externos), há riscos substanciais que precisam ser mitigados por experiência técnica adequada.
+1. **Múltiplas integrações**: Com 3 funções complexas relacionadas a integrações (API TOTVS e bancos de dados externos), há riscos substanciais que precisam ser mitigados por experiência técnica adequada.
 
 2. **Comunicação entre sistemas heterogêneos**: A necessidade de sincronizar dados entre sistemas diferentes requer conhecimento avançado em arquitetura de integração.
 
