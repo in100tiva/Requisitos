@@ -18,7 +18,7 @@ Abaixo, classificamos cada uma das 10 funções do sistema quanto ao seu nível 
 |--------|-------------|---------------|
 | 1. Puxar dados dos clientes | Média | Requer integração com banco externo e tratamento de dados |
 | 2. Puxar os produtos para venda | Média | Requer integração com banco externo e tratamento de dados para catálogo |
-| 3. Cadastro do pedido | Complexa | Envolve gravação em múltiplos bancos de dados com validações específicas |
+| 3. Cadastro do pedido | Média | Envolve gravação em múltiplos bancos de dados com validações específicas |
 | 4. Menu de ação | Simples | Interface de navegação com opções de menu configuráveis |
 | 5. Listar os pedidos | Média | Consulta de dados e formatação em lista com informações resumidas |
 | 6. Integração com API de venda (TOTVS) | Complexa | Integração com API externa proprietária que exige adaptação específica |
@@ -41,9 +41,9 @@ Com base na classificação acima, apresentamos a estimativa de custo detalhada 
 | Complexidade | Quantidade | Valor Unitário | Subtotal |
 |--------------|------------|----------------|----------|
 | Simples | 1 | R$ 1.000 | R$ 1.000 |
-| Média | 5 | R$ 2.200 | R$ 11.000 |
-| Complexa | 4 | R$ 3.500 | R$ 14.000 |
-| **TOTAL** | **10** | | **R$ 26.000** |
+| Média | 6 | R$ 2.200 | R$ 13.200 |
+| Complexa | 3 | R$ 3.500 | R$ 10.500 |
+| **TOTAL** | **10** | | **R$ 24.700** |
 
 **Faixa de preço estimada:** R$ 22.000 - R$ 30.000
 
