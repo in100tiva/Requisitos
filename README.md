@@ -29,8 +29,8 @@ Abaixo, classificamos cada uma das 10 funções do sistema quanto ao seu nível 
 
 **Resumo:**
 - Funções Simples: 1 função
-- Funções de Complexidade Média: 5 funções
-- Funções Complexas: 4 funções
+- Funções de Complexidade Média: 6 funções
+- Funções Complexas: 3 funções
 
 ## 3. Estimativa de Custo por Nível de Desenvolvedor
 
